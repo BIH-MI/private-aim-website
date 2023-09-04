@@ -14,7 +14,7 @@ Welcome to the PrivateAIM website repository. This project hosts the official we
 
 ## Description
 
-PrivateAIM website serves as the front-facing interface for our users, showcasing our commitment to data privacy, core values, and the services we offer.
+The PrivateAIM provides information on the PrivateAIM consortium, its partners and results.
 
 ## Directory Structure
 
@@ -40,12 +40,7 @@ private-aim-website/
    git clone https://github.com/BIH-MI/private-aim-website.git
    ```
 
-2. Navigate into the directory:
-   ```bash
-   cd private-aim-website
-   ```
-
-3. Open the desired HTML file in your browser to preview the website.
+2. Serve through web server of your choice.
 
 ## Contribute
 
