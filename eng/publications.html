@@ -16,7 +16,7 @@
       document.title = title + " | PrivateAIM";
     }
     // Rufe die Funktion auf, um den Seitentitel zu aktualisieren
-    updatePageTitle("Home");
+    updatePageTitle("Publications");
 
     $(document).ready(function() {
         $(window).scroll(function() {
@@ -40,39 +40,7 @@
     .navbar-nav {
       margin-left: auto;
     }
-    .banner {
-      position: relative;
-      background-image: url("../images/home.jpeg");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-    .banner-content {
-      text-align: left;
-      margin-left: 10%;
-      color: white;
-    }
-    .banner-title {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    .banner-subtitle {
-      font-size: 1.5rem;
-    }
-    .centered-column {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 400px;
-    }
-    .centered-column img {
-      max-width: 70%;
-      height: auto;
-      margin-right: 20px;
-    }
-    .middle-column {
+    .text {
       font-size: 1.15rem; 
     }
     .footer {
@@ -90,15 +58,34 @@
       max-height: 50px;
       margin-right: 10px;
     }
-    .custom-hr {
-        height: 3px;
-        background-image: linear-gradient(to right, transparent, grey, transparent);
-        border: none;
-        margin: 20px 0;
-    }
     .flag-image {
       max-height: 12px;
     }
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+    }
+    .logo-cell img {
+      height: 100px;
+      width: 300px; 
+      object-fit: contain;
+    }
+    .logo-cell {
+      text-align: center;
+      vertical-align: middle;
+    }
+    .empty-row {
+      height: 20px; /* Adjust the height as needed */
+      border: none;
+    }
+    .main-header {
+      margin-top: 3% !important;
+    }
+    @media only screen and (max-width: 767px) {
+      .big-logo {
+      height: 50px !important;
+      }
+    }  
   </style>
 </head>
 <body>
@@ -131,42 +118,32 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../de/index.html"><img src="../images/flag_de.png" alt="Flagge" class="flag-image"></a>
+            <a class="nav-link" href="../de/publikationen.html"><img src="../images/flag_de.png" alt="Flagge" class="flag-image"></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="banner">
-    <div class="banner-content">
-      <div class="banner-title">PrivateAIM</div>
-      <div class="banner-subtitle">Privacy-Preserving Analytics in Medicine</div>
-    </div>
-  </div>
+  <div class="container col-lg-6 text-muted">
+    <h3 class="main-header">Publications</h3>
+    <p class="text">Here you can find an overview of our publications.</p>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 centered-column text-center text-md-start">
-        <img src="../images/PrivateAIM_logo.png" alt="PrivateAIM - MII - Logo">
-      </div>
-      <div class="col-md-5 centered-column middle-column text-center text-md-start">
-        <p class="text-muted">
-          The goal of the Privacy-Preserving Analytics in Medicine (PrivateAIM) project 
-          is to develop a federated platform for privacy-preserving machine learning and 
-          data analytics for the Medical Informatics Initiative (MII). For this, customized 
-          AI methods, federation mechanisms, and protection models will be developed to 
-          protect patients' identities and sensitive health information.
-          <br><br>
-          <button style="font-size: 20px; padding: 10px 20px; background-color: #7dc051; color: white; border: none; cursor: pointer;" onclick="window.location.href='project.html'">Learn more about PrivateAIM <i class="fas fa-arrow-right"></i></button>
-        </p>
-      </div>
-    </div>
-    <hr class="custom-hr">
-    <div class="row text-center">
-      <p class="text-muted">An overview of further use cases and projects of the MII can be found at the&nbsp;<a href="https://www.medizininformatik-initiative.de/de/use-cases-und-projekte">MII-Website.</a></p>
-    </div>
-  </div>
+    <h5>Selection of publications of the partners relevant to the project:</h5>
+    <p class="text">
+        Herr, M., Graf, M., Placzek, P., König, F., Bötte, F., Stickel, T., Hieber, D., Zimmermann, L., Slupina, M., Mohr, C., Biergans, S., Akgün, M., Pfeifer, N., & Kohlbacher, O. (2022). Bringing the Algorithms to the Data - Secure Distributed Medical  Analytics using the Personal Health Train (PHT-meDIC). arXiv (Cornell University). <a href="https://doi.org/10.48550/arxiv.2212.03481" target="_blank">Link</a>
+        <br><br>
+        Ziller, A., Trask, A., Lopardo, A., Szymkow, B., Wagner, B., Bluemke, E., Nounahon, J., Passerat-Palmbach, J., Prakash, K., Rose, N., Ryffel, T., Reza, Z. N., & Kaissis, G. (2021). PySyft: A Library for Easy Federated Learning. In Springer eBooks (pp. 111–139). <a href="https://doi.org/10.1007/978-3-030-70604-3_5" target="_blank">Link</a>
+        <br><br>
+        Kaissis, G., Ziller, A., Passerat-Palmbach, J., Ryffel, T., Usynin, D., Trask, A., Lima, I., Mancuso, J., Jungmann, F., Steinborn, M., Saleh, A., Makowski, M. R., Rueckert, D., & Braren, R. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. Nature Machine Intelligence, 3(6), 473–484. <a href="https://doi.org/10.1038/s42256-021-00337-8" target="_blank">Link</a>
+        <br><br>
+        Prasser, F., Kohlmayer, F., Lautenschläger, R., & Kuhn, K. A. (2014). ARX - A comprehensive tool for anonymizing biomedical data. In AMIA Annual Symposium Proceedings (Vol. 2014, p. 984). American Medical Informatics Association. [Washington DC, 15.-19. November 2014: AMIA Annual Symposium, 2014] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419984/" target="_blank">Link</a>
+        <br><br>
+        Wirth, F., Meurers, T., Johns, M., & Prasser, F. (2021). Privacy-preserving data sharing infrastructures for medical research: systematization and comparison. BMC Medical Informatics and Decision Making, 21(1). <a href="https://doi.org/10.1186/s12911-021-01602-x" target="_blank">Link</a>
+        <br><br>
+        Scherer, J., Nolden, M., Kleesiek, J., Metzger, J., Kades, K., Schneider, V., Bach, M., Sedlaczek, O., Bucher, A. M., Vogl, T. J., Grünwald, F., Kuhn, J., Hoffmann, R., Kotzerke, J., Bethge, O. T., Schimmöller, L., Antoch, G., Müller, H., Daul, A., . . . Maier-Hein, K. H. (2020). Joint Imaging Platform for Federated Clinical Data Analytics. JCO Clinical Cancer Informatics, 4, 1027–1038. <a href="https://doi.org/10.1200/cci.20.00045" target="_blank">Link</a>
+    </p>
+</div>
 
   <div class="footer">
     <div class="sponsorship">

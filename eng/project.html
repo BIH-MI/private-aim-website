@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="icon" href="../images/PrivateAIM_ownLogo.png" type="image/x-icon">
+  <title><!-- Hier wird der Titel der Seite dynamisch eingefügt --> | PrivateAIM</title>
+  <script>
+    // Funktion, um den Seitentitel zu aktualisieren
+    function updatePageTitle(title) {
+      document.title = title + " | PrivateAIM";
+    }
+    // Rufe die Funktion auf, um den Seitentitel zu aktualisieren
+    updatePageTitle("Project");
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) { // Zeigen Sie den Button nach 100 gescrollten Pixeln
+                $('#scrollToTop').fadeIn();
+            } else {
+                $('#scrollToTop').fadeOut();
+            }
+        });
+
+        $('#scrollToTop').click(function() {
+            $('html, body').animate({scrollTop: 0}, 800); // 800 ist die Dauer des Scroll-Effekts in Millisekunden
+            return false;
+        });
+    });
+  </script>
+  <style>
+    .navbar-logo {
+      max-height: 50px;
+    }
+    .navbar-nav {
+      margin-left: auto;
+    }
+    .text {
+      font-size: 1.15rem; 
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .sponsorship {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .sponsorship-logo {
+      max-height: 50px;
+      margin-right: 10px;
+    }
+    .flag-image {
+      max-height: 12px;
+    }
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .main-header {
+      margin-top: 3%;
+    }
+    @media (max-width: 767px) {
+  .custom-col {
+    width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span><img src="../images/PrivateAIM_ownLogo.png" alt="Logo" class="navbar-logo"> PrivateAIM</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project.html">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../de/projekt.html"><img src="../images/flag_de.png" alt="Flagge" class="flag-image"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container col-lg-8 text-muted">
+  <h3 class="main-header">Project</h3>
+
+  <strong>
+      <p class="text"> 
+        The analysis of health data plays a crucial role in medical research and enables 
+        more precise diagnoses, more effective treatments and future-oriented care. 
+        However, given the sensitivity of such data, careful handling is essential to 
+        ensure both legal requirements and the protection of patient privacy. This 
+        challenge is particularly evident in the context of training artificial 
+        intelligence (AI) models, where extensive data sets are necessary to obtain 
+        reliable results.
+      </p>
+  </strong>
+  
+  <img class="responsive-image" src="../images/how_it_works.png" alt="Beschreibung des Bildes">
+  <figcaption>
+      The image shows the difference between distributed analysis and data aggregation: 
+      on the left are several nodes of a decentralized analysis, while on the right the 
+      data streams flow to a central location.
+  </figcaption>
+  <br>
+  
+  <p class="text">
+      The PrivateAIM (Privacy-preserving Analytics in Medicine) method platform addresses 
+      precisely this interface and attempts to pave a balanced path between data protection 
+      and data use. It follows the principle of 'code to the data', in which the health data 
+      remain in the protected environments of the university hospitals and only the analysis 
+      algorithms are exchanged. This form of decentralized analysis ensures that data never 
+      leaves its secure environment. Patients' identities and sensitive health information 
+      thus remain fully protected and cannot be viewed by researchers at any time.
+
+      To achieve this goal, the PrivateAIM project is dedicated to developing customized AI 
+      methods, risk models and federation mechanisms. These innovations are incorporated into 
+      the newly developed software platform FLAME (Federated Learning and Analysis in Medicine) 
+      and thus form the technological core for secure, distributed evaluations in the Medical 
+      Informatics Initiative (MII).
+  </p>
+  <br>
+  <p class="text">
+      The PrivateAIM consortium brings together a variety of experts from university medicine 
+      and other institutions. A total of 17 partners from all four MII consortia, including 
+      three MII-funded junior research groups, are involved in the project. Special emphasis 
+      is placed on the active involvement of patients and other stakeholders to bring 
+      multi-layered perspectives to the project.
+
+      The consortium is working hard to explain the technical procedures for privacy-compliant 
+      federated evaluations and machine learning (ML) to citizens in a comprehensible way. 
+      The goal is to communicate the security guarantees and protection that these methods 
+      offer in a transparent and comprehensible manner. To this end, patients and the general 
+      public are educated about PrivateAIM's work through easy-to-understand information materials. 
+      In addition, patients and other stakeholders will be involved in workshops from the outset 
+      to actively shape the design, implementation, and evaluation of privacy-friendly federated 
+      methods.
+  </p>
+  <br>
+  <p class="text">
+      Before the results of the project are put into practice, FLAME will be put through its 
+      paces both with benchmark data sets and in real applications. Broad acceptance is targeted 
+      through a multi-stage rollout concept involving the data integration centers of all MII consortia. 
+      The provision as open source software and the cooperation with related projects contribute 
+      significantly to the sustainability of the project.
+
+      Over the next four years, the PrivateAIM method platform with FLAME in the MII will offer an 
+      additional possibility to analyze medical data efficiently and securely across locations. 
+      Especially for modern AI methods, this will open up the urgently needed extensive data volumes 
+      without neglecting the central aspect of data protection for patients.
+  </p>
+</div>
+
+  <div class="footer">
+    <div class="sponsorship">
+      <img src="../images/bmbf.png" alt="Förderlogo" class="sponsorship-logo">
+      <p>This project is funded by the Medical Informatics Initiative under the grant numbers 01ZZ2316A-O.</p>
+    </div>
+    <p>PrivateAIM © 2023</p>
+    <p><a href="privacy.html">Privacy policy</a> | <a href="imprint.html">Imprint</a></p>
+  </div>
+
+  <button id="scrollToTop" class="btn btn-light" style="position: fixed; bottom: 50px; right: 50px; display: none;">
+    <i class="fas fa-arrow-up"></i> 
+  </button>
+</body>
+</html>
