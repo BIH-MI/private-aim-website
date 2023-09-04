@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" href="../images/PrivateAIM_ownLogo.png" type="image/x-icon">
+  <title><!-- Hier wird der Titel der Seite dynamisch eingefügt --> | PrivateAIM</title>
+  <script>
+    // Funktion, um den Seitentitel zu aktualisieren
+    function updatePageTitle(title) {
+      document.title = title + " | PrivateAIM";
+    }
+    // Rufe die Funktion auf, um den Seitentitel zu aktualisieren
+    updatePageTitle("News");
+  </script>
+  <style>
+    .navbar-logo {
+      max-height: 50px;
+    }
+    .navbar-nav {
+      margin-left: auto;
+    }
+    .text {
+      font-size: 1.15rem; 
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .sponsorship {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .sponsorship-logo {
+      max-height: 50px;
+      margin-right: 10px;
+    }
+    .flag-image {
+      max-height: 12px;
+    } 
+    .main-header {
+      margin-top: 3%;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span><img src="../images/PrivateAIM_ownLogo.png" alt="Logo" class="navbar-logo"> PrivateAIM</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projekt.html">Projekt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publikationen.html">Publikationen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../eng/news.html"><img src="../images/flag_eng.png" alt="Flagge" class="flag-image"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container col-lg-6 text-muted">
+    <h3 class="main-header">News</h3>
+    <p class="text">Hier finden Sie eine Übersicht der aktuellen News im Kontext von PrivateAIM.</p>
+
+    <blockquote class="twitter-tweet"><p lang="de" dir="ltr">🆕 PrivateAIM hat zum Ziel, eine föderierte Plattform für datenschutzgerechtes maschinelles Lernen &amp; Datenanalytik für die MII zu entwickeln. Dabei sollen die Analysen zu den Daten kommen.<br>➡ Mehr: <a href="https://t.co/AWs5z6Eo80">https://t.co/AWs5z6Eo80</a><a href="https://twitter.com/hashtag/Medizininformatik?src=hash&amp;ref_src=twsrc%5Etfw">#Medizininformatik</a> <a href="https://twitter.com/hashtag/ehealth?src=hash&amp;ref_src=twsrc%5Etfw">#ehealth</a> <a href="https://twitter.com/hashtag/machinelearning?src=hash&amp;ref_src=twsrc%5Etfw">#machinelearning</a> <a href="https://t.co/Rx6EP1IivC">pic.twitter.com/Rx6EP1IivC</a></p>&mdash; Medizininformatik-Initiative (@MII_Germany) <a href="https://twitter.com/MII_Germany/status/1660541565792661505?ref_src=twsrc%5Etfw">May 22, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+  <div class="footer">
+    <div class="sponsorship">
+      <img src="../images/bmbf.png" alt="Förderlogo" class="sponsorship-logo">
+      <p>Dieses Projekt wird im Rahmen der Medizininformatik-Initiative unter den Förderkennzeichen 01ZZ2316A-O finanziert.</p>
+    </div>
+    <p>PrivateAIM © 2023</p>
+    <p><a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+  </div>
+
+</body>
+</html>

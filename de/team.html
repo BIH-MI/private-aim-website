@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="icon" href="../images/PrivateAIM_ownLogo.png" type="image/x-icon">
+  <title><!-- Hier wird der Titel der Seite dynamisch eingefügt --> | PrivateAIM</title>
+  <script>
+    // Funktion, um den Seitentitel zu aktualisieren
+    function updatePageTitle(title) {
+      document.title = title + " | PrivateAIM";
+    }
+    // Rufe die Funktion auf, um den Seitentitel zu aktualisieren
+    updatePageTitle("Team");
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) { // Zeigen Sie den Button nach 100 gescrollten Pixeln
+                $('#scrollToTop').fadeIn();
+            } else {
+                $('#scrollToTop').fadeOut();
+            }
+        });
+
+        $('#scrollToTop').click(function() {
+            $('html, body').animate({scrollTop: 0}, 800); // 800 ist die Dauer des Scroll-Effekts in Millisekunden
+            return false;
+        });
+    });
+  </script>
+  <style>
+    .navbar-logo {
+      max-height: 50px;
+    }
+    .navbar-nav {
+      margin-left: auto;
+    }
+    .text {
+      font-size: 1.15rem;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .sponsorship {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .sponsorship-logo {
+      max-height: 50px;
+      margin-right: 10px;
+    }
+    .flag-image {
+      max-height: 12px;
+    }
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+    }
+    .logo-cell img {
+      height: 100px;
+      width: 300px; 
+      object-fit: contain;
+    }
+    .logo-cell {
+      text-align: center;
+      vertical-align: middle;
+    }
+    .empty-row {
+      height: 20px;
+      border: none;
+    }
+    .main-header {
+      margin-top: 3%;
+    }
+    @media only screen and (max-width: 767px) {
+      .big-logo {
+      height: 50px !important;
+      }
+      table, tbody, tr, td {
+          display: block;
+          width: 100%;
+      }
+      td.logo-cell img {
+          max-width: 100%;
+      }
+      td.logo-cell, td.text, td.empty-row {
+          margin-bottom: 5px;
+      }
+  }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span><img src="../images/PrivateAIM_ownLogo.png" alt="Logo" class="navbar-logo"> PrivateAIM</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projekt.html">Projekt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publikationen.html">Publikationen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../eng/team.html"><img src="../images/flag_eng.png" alt="Flagge" class="flag-image"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container col-lg-8 text-muted">
+    <h3 class="main-header">Team</h3>
+    <p class="text">
+        Insgesamt sind 17 Partner aus allen vier Konsortien der Medizininformatik-Initiative (MII) an PrivateAIM beteiligt. 
+        Mit dabei sind auch drei MII geförderte Nachwuchsgruppen. Das Projekt wird vom Universitätsklinikum Tübingen, 
+        dem Berlin Institute of Health in der Charité sowie der Technischen Universität München koordiniert.
+    </p>
+
+    <h6>Hier finden Sie eine Übersicht an beteiligte Universitäten und Forschungseinrichtungen:</h2>
+
+    <table class="table table-bordered">
+      <tr>
+          <td colspan="3" class="text" style="background-color: rgb(212, 207, 207);"><b>Koordination</b></td>
+      </tr>
+      <tr>
+          <td class="logo-cell"><a href="https://www.bihealth.org/de/forschung/arbeitsgruppe/ag-prasser-medizininformatik"><img src="../images/partner_logos/BIH.png" alt="BIH"></a></td>
+          <td class="logo-cell"><a href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/einrichtungen/institute/informationstechnologie-und-medizininformatik/translationale-bioinformatik"><img src="../images/partner_logos/UKT.png" alt="UKT"></a></td>
+          <td class="logo-cell"><a href="https://www.kiinformatik.mri.tum.de/"><img src="../images/partner_logos/TUM.svg" alt="TUM"></a></td>
+      </tr>
+      <tr>
+          <td colspan="3" class="empty-row"></td>
+      </tr>
+      <tr>
+          <td colspan="3" class="text" style="background-color: rgb(212, 207, 207);"><b>Projektpartner</b></td>
+      </tr>
+      <tr>
+          <td class="logo-cell"><a href="https://www.ibe.med.uni-muenchen.de/index.html"><img src="../images/partner_logos/LMU.png" alt="LMU" class="big-logo"></a></td>
+          <td class="logo-cell"><a href="https://www.dkfz.de/de/index.html"><img src="../images/partner_logos/DKFZ.png" alt="DKFZ"></a></td>
+          <td class="logo-cell"><a href="https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/fachbereich/"><img src="../images/partner_logos/EKUT.png" alt="EKUT"></a></td>
+      </tr>
+      <tr>
+          <td class="logo-cell"><a href="https://www.tmf-ev.de/"><img src="../images/partner_logos/tmf.jpg" alt="TMF" class="big-logo"></a></td>
+          <td class="logo-cell"><a href="https://sysbio.uni-ulm.de/"><img src="../images/partner_logos/UKU.svg" alt="UKU"></a></td>
+          <td class="logo-cell"><a href="https://www.imi.med.fau.de/"><img src="../images/partner_logos/UKER.svg" alt="UKER"></a></td>
+      </tr>
+      <tr>
+          <td class="logo-cell"><a href="https://www.uniklinik-freiburg.de/imbi.html"><img src="../images/partner_logos/UKFR.png" alt="UKFR"></a></td>
+          <td class="logo-cell"><a href="https://www.klinikum.uni-heidelberg.de/zentrum-fuer-innere-medizin-medizin-klinik/innere-medizin-iii-kardiologie-angiologie-und-pneumologie/forschung/forschung/klaus-tschira-institut-for-computational-cardiology"><img src="../images/partner_logos/UKHD.png" alt="UKHD"></a></td>
+          <td class="logo-cell"><a href="https://www.uk-koeln.de/de/forschung/medical-data-integration-center-medic/"><img src="../images/partner_logos/UKK.png" alt="UKK" class="big-logo"></a></td>
+      </tr>
+      <tr>
+          <td class="logo-cell"><a href="https://www.uniklinikum-leipzig.de/einrichtungen/medical-data-science/"><img src="../images/partner_logos/UKL.png" alt="UKL"></a></td>
+          <td class="logo-cell"><a href="https://cispa.de/de"><img src="../images/partner_logos/CISPA.svg" alt="CISPA"></a></td>
+          <td class="logo-cell"><a href="https://www.umm.uni-heidelberg.de/mi3/"><img src="../images/partner_logos/UMM.svg" alt="UMM"></a></td>
+      </tr>
+      <tr>
+          <td colspan="3" class="empty-row"></td>
+      </tr>
+      <tr>
+          <td colspan="2" class="text" style="background-color: rgb(212, 207, 207);"><b>Assoziierte Partner</b></td>
+          <td class="logo-cell" style="border: 1px solid white;"></td>
+        </tr>
+      <tr>
+          <td class="logo-cell"><a href="https://www.ikim.uk-essen.de/"><img src="../images/partner_logos/UKE.png" alt="UKE"></a></td>
+          <td class="logo-cell"><a href="https://mi-ki.eu/de/willkommen/"><img src="../images/partner_logos/UKSH.png" alt="UKSH"></a></td>
+          <td class="logo-cell" style="border: 1px solid white;"></td>
+        </tr>
+  </table>
+</div>
+
+  <div class="footer">
+    <div class="sponsorship">
+      <img src="../images/bmbf.png" alt="Förderlogo" class="sponsorship-logo">
+      <p>Dieses Projekt wird im Rahmen der Medizininformatik-Initiative unter den Förderkennzeichen 01ZZ2316A-O finanziert.</p>
+    </div>
+    <p>PrivateAIM © 2023</p>
+    <p><a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+  </div>
+
+  <button id="scrollToTop" class="btn btn-light" style="position: fixed; bottom: 50px; right: 50px; display: none;">
+    <i class="fas fa-arrow-up"></i> 
+  </button>
+</body>
+</html>

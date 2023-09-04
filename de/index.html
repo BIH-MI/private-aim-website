@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="icon" href="../images/PrivateAIM_ownLogo.png" type="image/x-icon">
+  <title><!-- Hier wird der Titel der Seite dynamisch eingefügt --> | PrivateAIM</title>
+  <script>
+    // Funktion, um den Seitentitel zu aktualisieren
+    function updatePageTitle(title) {
+      document.title = title + " | PrivateAIM";
+    }
+    // Rufe die Funktion auf, um den Seitentitel zu aktualisieren
+    updatePageTitle("Home");
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) { // Zeigen Sie den Button nach 100 gescrollten Pixeln
+                $('#scrollToTop').fadeIn();
+            } else {
+                $('#scrollToTop').fadeOut();
+            }
+        });
+
+        $('#scrollToTop').click(function() {
+            $('html, body').animate({scrollTop: 0}, 800); // 800 ist die Dauer des Scroll-Effekts in Millisekunden
+            return false;
+        });
+    });
+  </script>
+  <style>
+    .navbar-logo {
+      max-height: 50px;
+    }
+    .navbar-nav {
+      margin-left: auto;
+    }
+    .banner {
+      position: relative;
+      background-image: url("../images/home.jpeg");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .banner-content {
+      text-align: left;
+      margin-left: 10%;
+      color: white;
+    }
+    .banner-title {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .banner-subtitle {
+      font-size: 1.5rem;
+    }
+    .centered-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+    }
+    .centered-column img {
+      max-width: 70%;
+      height: auto;
+      margin-right: 20px;
+    }
+    .middle-column {
+      font-size: 1.15rem; 
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .sponsorship {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .sponsorship-logo {
+      max-height: 50px;
+      margin-right: 10px;
+    }
+    .custom-hr {
+        height: 3px;
+        background-image: linear-gradient(to right, transparent, grey, transparent);
+        border: none;
+        margin: 20px 0;
+    }
+    .flag-image {
+      max-height: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span><img src="../images/PrivateAIM_ownLogo.png" alt="Logo" class="navbar-logo"> PrivateAIM</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projekt.html">Projekt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publikationen.html">Publikationen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../eng/index.html"><img src="../images/flag_eng.png" alt="Flagge" class="flag-image"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <div class="banner-content">
+      <div class="banner-title">PrivateAIM</div>
+      <div class="banner-subtitle">Privacy-Preserving Analytics in Medicine</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 centered-column text-center text-md-start">
+        <img src="../images/PrivateAIM_logo.png" alt="PrivateAIM - MII - Logo">
+      </div>
+      <div class="col-md-5 centered-column middle-column text-center text-md-start">
+        <p class="text-muted">Ziel des Projekts „Privacy-Preserving Analytics in Medicine“ 
+          (PrivateAIM) ist es, eine föderierte Plattform für datenschutzgerechtes 
+          maschinelles Lernen und Datenanalytik für die Medizininformatik-Initiative 
+          (MII) zu entwickeln. Dafür werden maßgeschneiderte KI-Methoden, Föderationsmechanismen 
+          und Schutzmodelle entwickelt, die die Identitäten und sensiblen Gesundheitsinformationen 
+          der Patientinnen und Patienten schützen.
+          <br><br>
+          <button style="font-size: 20px; padding: 10px 20px; background-color: #7dc051; color: white; border: none; cursor: pointer;" onclick="window.location.href='projekt.html'">Erfahren Sie mehr über PrivateAIM <i class="fas fa-arrow-right"></i></button>
+        </p>
+      </div>
+    </div>
+    <hr class="custom-hr">
+    <div class="row text-center">
+      <p class="text-muted">Eine Übersicht über weitere Use Cases und Projekt der MII finden Sie auf der&nbsp;<a href="https://www.medizininformatik-initiative.de/de/use-cases-und-projekte">MII-Webseite.</a></p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="sponsorship">
+      <img src="../images/bmbf.png" alt="Förderlogo" class="sponsorship-logo">
+      <p>Dieses Projekt wird im Rahmen der Medizininformatik-Initiative unter den Förderkennzeichen 01ZZ2316A-O finanziert.</p>
+    </div>
+    <p>PrivateAIM © 2023</p>
+    <p><a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+  </div>
+
+  <button id="scrollToTop" class="btn btn-light" style="position: fixed; bottom: 50px; right: 50px; display: none;">
+    <i class="fas fa-arrow-up"></i> 
+  </button>
+</body>
+</html>

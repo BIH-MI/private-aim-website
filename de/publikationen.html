@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="icon" href="../images/PrivateAIM_ownLogo.png" type="image/x-icon">
+  <title><!-- Hier wird der Titel der Seite dynamisch eingefügt --> | PrivateAIM</title>
+  <script>
+    // Funktion, um den Seitentitel zu aktualisieren
+    function updatePageTitle(title) {
+      document.title = title + " | PrivateAIM";
+    }
+    // Rufe die Funktion auf, um den Seitentitel zu aktualisieren
+    updatePageTitle("Publikationen");
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) { // Zeigen Sie den Button nach 100 gescrollten Pixeln
+                $('#scrollToTop').fadeIn();
+            } else {
+                $('#scrollToTop').fadeOut();
+            }
+        });
+
+        $('#scrollToTop').click(function() {
+            $('html, body').animate({scrollTop: 0}, 800); // 800 ist die Dauer des Scroll-Effekts in Millisekunden
+            return false;
+        });
+    });
+  </script>
+  <style>
+    .navbar-logo {
+      max-height: 50px;
+    }
+    .navbar-nav {
+      margin-left: auto;
+    }
+    .text {
+      font-size: 1.15rem; 
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .sponsorship {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .sponsorship-logo {
+      max-height: 50px;
+      margin-right: 10px;
+    }
+    .flag-image {
+      max-height: 12px;
+    }
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+    }
+    .logo-cell img {
+      height: 100px;
+      width: 300px; 
+      object-fit: contain;
+    }
+    .logo-cell {
+      text-align: center;
+      vertical-align: middle;
+    }
+    .empty-row {
+      height: 20px; /* Adjust the height as needed */
+      border: none;
+    }
+    .main-header {
+      margin-top: 3% !important;
+    }
+    @media only screen and (max-width: 767px) {
+      .big-logo {
+      height: 50px !important;
+      }
+    }  
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span><img src="../images/PrivateAIM_ownLogo.png" alt="Logo" class="navbar-logo"> PrivateAIM</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projekt.html">Projekt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publikationen.html">Publikationen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../eng/publications.html"><img src="../images/flag_eng.png" alt="Flagge" class="flag-image"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container col-lg-6 text-muted">
+    <h3 class="main-header">Publikationen</h3>
+    <p class="text">Hier finden Sie eine Übersicht unserer Publikationen.</p>
+
+    <h5>Ausgewählte projektrelevante Publikationen der Partner:</h5>
+    <p class="text">
+        Herr, M., Graf, M., Placzek, P., König, F., Bötte, F., Stickel, T., Hieber, D., Zimmermann, L., Slupina, M., Mohr, C., Biergans, S., Akgün, M., Pfeifer, N., & Kohlbacher, O. (2022). Bringing the Algorithms to the Data - Secure Distributed Medical  Analytics using the Personal Health Train (PHT-meDIC). arXiv (Cornell University). <a href="https://doi.org/10.48550/arxiv.2212.03481" target="_blank">Link</a>
+        <br><br>
+        Ziller, A., Trask, A., Lopardo, A., Szymkow, B., Wagner, B., Bluemke, E., Nounahon, J., Passerat-Palmbach, J., Prakash, K., Rose, N., Ryffel, T., Reza, Z. N., & Kaissis, G. (2021). PySyft: A Library for Easy Federated Learning. In Springer eBooks (pp. 111–139). <a href="https://doi.org/10.1007/978-3-030-70604-3_5" target="_blank">Link</a>
+        <br><br>
+        Kaissis, G., Ziller, A., Passerat-Palmbach, J., Ryffel, T., Usynin, D., Trask, A., Lima, I., Mancuso, J., Jungmann, F., Steinborn, M., Saleh, A., Makowski, M. R., Rueckert, D., & Braren, R. (2021). End-to-end privacy preserving deep learning on multi-institutional medical imaging. Nature Machine Intelligence, 3(6), 473–484. <a href="https://doi.org/10.1038/s42256-021-00337-8" target="_blank">Link</a>
+        <br><br>
+        Prasser, F., Kohlmayer, F., Lautenschläger, R., & Kuhn, K. A. (2014). ARX - A comprehensive tool for anonymizing biomedical data. In AMIA Annual Symposium Proceedings (Vol. 2014, p. 984). American Medical Informatics Association. [Washington DC, 15.-19. November 2014: AMIA Annual Symposium, 2014] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419984/" target="_blank">Link</a>
+        <br><br>
+        Wirth, F., Meurers, T., Johns, M., & Prasser, F. (2021). Privacy-preserving data sharing infrastructures for medical research: systematization and comparison. BMC Medical Informatics and Decision Making, 21(1). <a href="https://doi.org/10.1186/s12911-021-01602-x" target="_blank">Link</a>
+        <br><br>
+        Scherer, J., Nolden, M., Kleesiek, J., Metzger, J., Kades, K., Schneider, V., Bach, M., Sedlaczek, O., Bucher, A. M., Vogl, T. J., Grünwald, F., Kuhn, J., Hoffmann, R., Kotzerke, J., Bethge, O. T., Schimmöller, L., Antoch, G., Müller, H., Daul, A., . . . Maier-Hein, K. H. (2020). Joint Imaging Platform for Federated Clinical Data Analytics. JCO Clinical Cancer Informatics, 4, 1027–1038. <a href="https://doi.org/10.1200/cci.20.00045" target="_blank">Link</a>
+    </p>
+</div>
+
+  <div class="footer">
+    <div class="sponsorship">
+      <img src="../images/bmbf.png" alt="Förderlogo" class="sponsorship-logo">
+      <p>Dieses Projekt wird im Rahmen der Medizininformatik-Initiative unter den Förderkennzeichen 01ZZ2316A-O finanziert.</p>
+    </div>
+    <p>PrivateAIM © 2023</p>
+    <p><a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+  </div>
+
+  <button id="scrollToTop" class="btn btn-light" style="position: fixed; bottom: 50px; right: 50px; display: none;">
+    <i class="fas fa-arrow-up"></i> 
+  </button>
+</body>
+</html>
